@@ -78,6 +78,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "twitter:card", content: "summary_large_image" },
+      { title: "Lovable App" },
+      { property: "og:title", content: "Lovable App" },
+      { name: "twitter:title", content: "Lovable App" },
+      { name: "description", content: "Learn to master Lovable with this study, covering Github, Supabase, workspace, and design." },
+      { property: "og:description", content: "Learn to master Lovable with this study, covering Github, Supabase, workspace, and design." },
+      { name: "twitter:description", content: "Learn to master Lovable with this study, covering Github, Supabase, workspace, and design." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/62aec230-54ef-4a69-98bb-853742964c67/id-preview-d6e46c46--d0155519-f469-4f60-8891-79d9ad244745.lovable.app-1781597116033.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/62aec230-54ef-4a69-98bb-853742964c67/id-preview-d6e46c46--d0155519-f469-4f60-8891-79d9ad244745.lovable.app-1781597116033.png" },
+      { property: "og:type", content: "website" },
     ],
     links: [
       {
