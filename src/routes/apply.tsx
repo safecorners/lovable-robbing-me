@@ -34,11 +34,7 @@ export const Route = createFileRoute("/apply")({
 });
 
 const formSchema = z.object({
-  name: z
-    .string()
-    .trim()
-    .min(1, "이름을 입력하세요")
-    .max(50, "이름이 너무 깁니다"),
+  name: z.string().trim().min(1, "이름을 입력하세요").max(50, "이름이 너무 깁니다"),
   phone: z
     .string()
     .trim()
@@ -65,13 +61,13 @@ function ApplyPage() {
     <div className="flex min-h-screen flex-col bg-background">
       <Navbar />
       <main className="flex-1">
-        <div className="mx-auto max-w-xl px-4 py-12 sm:px-6 sm:py-16">
+        <div className="mx-auto max-w-xl px-4 py-16 sm:px-6 sm:py-20">
           {submitted ? (
-            <div className="rounded-2xl border border-border bg-card p-8 text-center shadow-sm">
-              <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-primary/10 text-primary">
+            <div className="rounded-xl border border-border bg-card p-8 text-center">
+              <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-background text-foreground shadow-[var(--lovable-button-inset)]">
                 <CheckCircle2 className="h-7 w-7" />
               </span>
-              <h1 className="mt-5 text-2xl font-bold text-foreground">
+              <h1 className="mt-5 text-2xl font-semibold tracking-[-0.4px] text-foreground">
                 스터디 신청이 완료되었습니다.
               </h1>
               <p className="mt-3 text-sm text-muted-foreground">
@@ -87,8 +83,8 @@ function ApplyPage() {
               </div>
             </div>
           ) : (
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
-              <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+            <div className="rounded-xl border border-border bg-card p-6 sm:p-8">
+              <h1 className="text-3xl font-semibold tracking-[-0.9px] text-foreground sm:text-4xl">
                 스터디 신청
               </h1>
               <p className="mt-2 text-sm text-muted-foreground">
@@ -96,10 +92,7 @@ function ApplyPage() {
               </p>
 
               <Form {...form}>
-                <form
-                  onSubmit={form.handleSubmit(onSubmit)}
-                  className="mt-8 space-y-5"
-                >
+                <form onSubmit={form.handleSubmit(onSubmit)} className="mt-8 space-y-5">
                   <FormField
                     control={form.control}
                     name="name"

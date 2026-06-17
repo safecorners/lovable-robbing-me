@@ -13,13 +13,13 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link to="/" className="flex items-center gap-2 min-w-0">
-          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-primary text-primary-foreground">
+        <Link to="/" className="flex min-w-0 items-center gap-2">
+          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-background text-foreground shadow-[var(--lovable-button-inset)]">
             <ShieldCheck className="h-4 w-4" />
           </span>
-          <span className="truncate text-sm font-bold sm:text-base">
+          <span className="truncate text-sm font-semibold tracking-[-0.1px] sm:text-base">
             러버블에게 사기 당하지 않는 방법
           </span>
         </Link>
@@ -29,7 +29,7 @@ export function Navbar() {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              className="rounded-md px-3 py-2 text-sm font-normal text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
             >
               {item.label}
             </a>
@@ -42,7 +42,7 @@ export function Navbar() {
         <button
           type="button"
           aria-label="메뉴 열기"
-          className="grid h-10 w-10 place-items-center rounded-md md:hidden"
+          className="grid h-10 w-10 place-items-center rounded-md border border-border bg-background text-foreground md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -57,7 +57,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-3 text-sm font-medium text-foreground hover:bg-muted"
+                className="rounded-md px-3 py-3 text-sm font-normal text-foreground hover:bg-accent"
               >
                 {item.label}
               </a>

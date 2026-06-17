@@ -11,12 +11,10 @@ const items = [
 export function Audience() {
   return (
     <section id="audience" className="border-b border-border bg-background">
-      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20">
+      <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-primary">
-            대상자
-          </p>
-          <h2 className="mt-3 text-2xl font-bold tracking-tight text-foreground sm:text-3xl lg:text-4xl">
+          <p className="text-sm font-normal text-muted-foreground">대상자</p>
+          <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.9px] text-foreground sm:text-4xl lg:text-5xl lg:tracking-[-1.2px]">
             이런 분에게 추천합니다
           </h2>
         </div>
@@ -25,14 +23,12 @@ export function Audience() {
           {items.map((text) => (
             <li
               key={text}
-              className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 shadow-sm"
+              className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 transition-colors hover:border-[color:var(--lovable-interactive-border)]"
             >
-              <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground">
+              <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-background text-foreground shadow-[var(--lovable-button-inset)]">
                 <Check className="h-3.5 w-3.5" />
               </span>
-              <span className="text-sm leading-relaxed text-foreground sm:text-base">
-                {text}
-              </span>
+              <span className="text-sm leading-relaxed text-foreground sm:text-base">{text}</span>
             </li>
           ))}
         </ul>

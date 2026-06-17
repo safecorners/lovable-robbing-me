@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 export function CtaBand() {
   return (
     <section className="bg-primary">
-      <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20">
-        <h2 className="text-2xl font-bold tracking-tight text-primary-foreground sm:text-3xl lg:text-4xl">
+      <div className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 sm:py-24">
+        <h2 className="text-3xl font-semibold leading-tight tracking-[-0.9px] text-primary-foreground sm:text-4xl lg:text-5xl lg:tracking-[-1.2px]">
           Lovable을 더 안전하게 배우고 싶다면
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-primary-foreground/90 sm:text-base">
@@ -16,7 +16,7 @@ export function CtaBand() {
             <Button
               size="lg"
               variant="secondary"
-              className="bg-white text-primary hover:bg-white/90"
+              className="bg-background text-foreground hover:bg-background/90"
             >
               스터디 신청하기
             </Button>

@@ -32,31 +32,37 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
-  --font-sans: "Pretendard", "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
+  --font-sans:
+    "Camera Plain Variable", "Pretendard", "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.22 0.04 250);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.04 250);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.04 250);
-  --primary: oklch(0.38 0.09 155);
-  --primary-hover: oklch(0.32 0.09 155);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.97 0.005 250);
-  --secondary-foreground: oklch(0.22 0.04 250);
-  --muted: oklch(0.96 0.005 250);
-  --muted-foreground: oklch(0.5 0.02 250);
-  --accent: oklch(0.95 0.02 155);
-  --accent-foreground: oklch(0.32 0.09 155);
-  --destructive: oklch(0.6 0.22 25);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.92 0.01 250);
-  --input: oklch(0.92 0.01 250);
-  --ring: oklch(0.38 0.09 155);
+  --background: #f7f4ed;
+  --foreground: #1c1c1c;
+  --card: #f7f4ed;
+  --card-foreground: #1c1c1c;
+  --popover: #f7f4ed;
+  --popover-foreground: #1c1c1c;
+  --primary: #1c1c1c;
+  --primary-hover: rgba(28, 28, 28, 0.83);
+  --primary-foreground: #fcfbf8;
+  --secondary: rgba(28, 28, 28, 0.04);
+  --secondary-foreground: #1c1c1c;
+  --muted: rgba(28, 28, 28, 0.04);
+  --muted-foreground: #5f5f5d;
+  --accent: rgba(28, 28, 28, 0.03);
+  --accent-foreground: #1c1c1c;
+  --destructive: #b4533a;
+  --destructive-foreground: #fcfbf8;
+  --border: #eceae4;
+  --input: #eceae4;
+  --ring: rgba(59, 130, 246, 0.5);
+  --lovable-interactive-border: rgba(28, 28, 28, 0.4);
+  --lovable-button-inset:
+    rgba(255, 255, 255, 0.2) 0px 0.5px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 0px 0px 0.5px inset,
+    rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  --lovable-focus-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .dark {
@@ -96,5 +102,10 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: rgba(28, 28, 28, 0.12);
   }
 }

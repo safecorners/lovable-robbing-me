@@ -16,8 +16,7 @@ const cards: Card[] = [
   {
     icon: Database,
     title: "Supabase 연동",
-    description:
-      "데이터베이스, 인증, API 연동을 Supabase로 구성하는 기본 흐름을 익힙니다.",
+    description: "데이터베이스, 인증, API 연동을 Supabase로 구성하는 기본 흐름을 익힙니다.",
   },
   {
     icon: FolderKanban,
@@ -35,30 +34,26 @@ const cards: Card[] = [
 
 export function LearnCards() {
   return (
-    <section id="learn" className="border-b border-border bg-muted/40">
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+    <section id="learn" className="border-b border-border bg-accent">
+      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-primary">
-            학습 내용
-          </p>
-          <h2 className="mt-3 text-2xl font-bold tracking-tight text-foreground sm:text-3xl lg:text-4xl">
+          <p className="text-sm font-normal text-muted-foreground">학습 내용</p>
+          <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.9px] text-foreground sm:text-4xl lg:text-5xl lg:tracking-[-1.2px]">
             이런 것들을 배웁니다
           </h2>
         </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {cards.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="group rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+              className="group rounded-xl border border-border bg-card p-6 transition-[border-color,background-color] hover:border-[color:var(--lovable-interactive-border)]"
             >
-              <span className="grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+              <span className="grid h-11 w-11 place-items-center rounded-full bg-background text-foreground shadow-[var(--lovable-button-inset)] transition-opacity group-hover:opacity-80">
                 <Icon className="h-5 w-5" />
               </span>
-              <h3 className="mt-5 text-lg font-bold text-foreground">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {description}
-              </p>
+              <h3 className="mt-5 text-xl font-normal leading-tight text-foreground">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
             </div>
           ))}
         </div>
